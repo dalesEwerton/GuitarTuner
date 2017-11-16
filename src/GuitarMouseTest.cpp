@@ -40,8 +40,13 @@ void setup_window() {
         set_color_depth(32);
         set_gfx_mode(GFX_AUTODETECT_WINDOWED, WEIGHT, HEIGHT, 0, 0);
         BITMAP *buffer = create_bitmap(WEIGHT, HEIGHT);
+
+        //rectfill(buffer, 2, 2, WEIGHT-4, HEIGHT-4, 0xC0C0C0);
+           //Cor dentro do display
+       //rectfill(buffer, 30, 30, WEIGHT-30, HEIGHT-30,  0x008080);
         BITMAP *fundo = load_bitmap("fundo.BMP",NULL);
-        BITMAP* cursor = load_bitmap("mouse.BMP", NULL);
+        BITMAP *cursor = load_bitmap("cursor.BMP", NULL);
+
 
         while(!key[KEY_ESC]){
             if( key[KEY_A])
@@ -62,7 +67,9 @@ void setup_window() {
            && mouse_y >= 0 && mouse_y < 100)
         {
             rectfill(buffer, 0, 100, 0, 100, makecol(255,255,0));
+     //       rectfill(buffer, 2, 2, WEIGHT-30, HEIGHT-10,  0xFFFFFF);
             rectfill(buffer,0,100,0,100,makecol(255,200,200));
+          /* Função do botão*/
             if(mouse_b == 1 )
           {
              playSong('e');
@@ -125,19 +132,21 @@ void setup_window() {
         //DRAW
         draw_sprite(buffer, cursor, mouse_x, mouse_y);
         draw_sprite(screen, buffer, 0, 0);
+        //draw_sprite(fundo,screen,WEIGHT,HEIGHT);
          //Testando os audios
         clear(buffer);
         //LIMPA O BUFFER E "RECOLORE" A TELA
         rectfill(buffer, 2, 2, WEIGHT-4, HEIGHT-4, 0xC0C0C0);
-
+       // rectfill(fy,2, 2, WEIGHT-4, HEIGHT-4, 0xC0C0C0);
         rectfill(buffer, 30, 30, WEIGHT-30, HEIGHT-30,  0x008080);
-    }
 
-           //Cor fora do display
-        blit(buffer, screen, 0, 0, 0, 0, WEIGHT, HEIGHT);
-        destroy_bitmap(fundo);
+
+    }
+   // blit(fundo,buffer,0,0,0,0,WEIGHT,HEIGHT);
+    blit(buffer,screen,0,0,0,0,WEIGHT,HEIGHT);
         destroy_bitmap(cursor);
         destroy_bitmap(buffer);
+           //Cor fora do display
 }
 
 	   //Função q definirá os botões na tela deve ser chamada aqui
