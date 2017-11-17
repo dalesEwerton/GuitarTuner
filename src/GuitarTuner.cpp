@@ -74,7 +74,7 @@ void play_app(){
         if(mouse_x >= 170 && mouse_x < 250
            && mouse_y >= 50 && mouse_y < 130) {
             if(mouse_b == 1 ) {
-             playSong('e');
+             playSong('E');
           }
             else if(mouse_b == 2) {
               textout_ex(buffer, font, "Nota ' e ' a ser pressionada!", 170, 30, makecol(0,0,255), -1);
@@ -99,7 +99,7 @@ void play_app(){
 
         else if(mouse_x >= 170 && mouse_x < 250 && mouse_y >= 280 && mouse_y <= 370){
             if(mouse_b == 1){
-                playSong('E');
+                playSong('e');
             }
             else if(mouse_b == 2){
                  textout_ex(buffer, font, "Nota ' E ' a ser pressionada!", 170, 30, makecol(0,0,255), -1);
