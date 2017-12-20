@@ -18,7 +18,7 @@ funcaoMouse (MouseButton RightButton)_ _ _ = exitWith ExitSuccess
 funcaoMouse (Char 'x')              _ _ _ = exitWith ExitSuccess
 funcaoMouse _                       _ _ _ = postRedisplay Nothing
 
--- limpar o buffer da tela
+-- limpa o buffer da tela
 reshape :: ReshapeCallback
 reshape size@(Size width height) =
    unless (height == 0) $ do
@@ -36,6 +36,25 @@ display = do
   renderPrimitive Points $
      mapM_ (\(x, y, z) -> vertex $ Vertex3 x y z) botoes
   flush
+
+-- recebe as letras correspondentes a nota
+recebe :: Int -> IO()
+recebe 0 = return ()
+recebe nota = do
+        letra <- getLine
+        verifica letra
+        recebe(nota -1)
+        
+-- verifica as notas para lançar o som
+verifica :: String -> IO()
+verifica nota 
+          | nota == "e" = print 1
+          | nota == "a" = print 2
+          | nota == "d" = print 3
+          | nota == "b" = print 4
+          | nota == "g" = print 5
+          |otherwise = print 6
+
 
 main :: IO ()
 main = do
