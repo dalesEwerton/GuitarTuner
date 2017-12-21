@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Guitar Tuner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tuner.css">
 </head>
 <body>
+
+<h1 class="jumbotron">Guitar Tuner</h1>
 <div>
     <audio src="songs/E6.wav" id="audio6" loop>Canvas not supported</audio>
     <audio src="songs/A5.wav" id="audio5" loop>Canvas not supported</audio>
@@ -22,14 +25,14 @@
     <input type="hidden" id="audioFile2" value="songs/B2.wav" />
     <input type="hidden" id="audioFile1" value="songs/E1.wav" />
 </div>
-
-<br><br><br>
-<button class="btn btn-primary" id="E6" onclick="main(5);">E6</button>
-<button class="btn btn-primary" id="A5" onclick="main(4);">A5</button>
-<button class="btn btn-primary" id="D4" onclick="main(3);">D4</button>
-<button class="btn btn-primary" id="G3" onclick="main(2);">G3</button>
-<button class="btn btn-primary" id="B2" onclick="main(1);">B2</button>
-<button class="btn btn-primary" id="E1" onclick="main(0);">E1</button>
+<br>
+<img src="lines.jpg" width="450" height="280"><br>
+<button class="btn btn-primary btn-circle btn-xl" id="E6" onclick="main(5);">E6</button>
+<button class="btn btn-primary btn-circle btn-xl" id="A5" onclick="main(4);">A5</button>
+<button class="btn btn-primary btn-circle btn-xl" id="D4" onclick="main(3);">D4</button>
+<button class="btn btn-primary btn-circle btn-xl" id="G3" onclick="main(2);">G3</button>
+<button class="btn btn-primary btn-circle btn-xl" id="B2" onclick="main(1);">B2</button>
+<button class="btn btn-primary btn-circle btn-xl" id="E1" onclick="main(0);">E1</button>
 <br>
 
 
