@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Guitar Tuner</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <audio src="songs/E6.wav" id="audio6" loop>Canvas not supported</audio>
+    <audio src="songs/A5.wav" id="audio5" loop>Canvas not supported</audio>
+    <audio src="songs/D4.wav" id="audio4" loop>Canvas not supported</audio>
+    <audio src="songs/G3.wav" id="audio3" loop>Canvas not supported</audio>
+    <audio src="songs/B2.wav" id="audio2" loop>Canvas not supported</audio>
+    <audio src="songs/E1.wav" id="audio1" loop>Canvas not supported</audio>
+</div>
+<div>
+    <input type="hidden" id="audioFile6" value="songs/E6.wav" />
+    <input type="hidden" id="audioFile5" value="songs/A5.wav" />
+    <input type="hidden" id="audioFile4" value="songs/D4.wav" />
+    <input type="hidden" id="audioFile3" value="songs/G3.wav" />
+    <input type="hidden" id="audioFile2" value="songs/B2.wav" />
+    <input type="hidden" id="audioFile1" value="songs/E1.wav" />
+</div>
+
+<br><br><br>
+<button class="btn btn-primary" id="E6" onclick="main(5);">E6</button>
+<button class="btn btn-primary" id="A5" onclick="main(4);">A5</button>
+<button class="btn btn-primary" id="D4" onclick="main(3);">D4</button>
+<button class="btn btn-primary" id="G3" onclick="main(2);">G3</button>
+<button class="btn btn-primary" id="B2" onclick="main(1);">B2</button>
+<button class="btn btn-primary" id="E1" onclick="main(0);">E1</button>
+<br>
+
+
+<script src="GuitarTuner.js"></script>
+</body>
+</html>
